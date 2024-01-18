@@ -23,7 +23,8 @@ pacstrap /mnt base
 # generate a fstab.
 genfstab -U -p /mnt >> /mnt/etc/fstab
 # alter fstab using following guide: https://wiki.archlinux.org/index.php/Fstab#Field_definitions
-nano /mnt/etc/fstab
+rm /mnt/etc/fstab
+wget https://raw.githubusercontent.com/TheCastleProgramer/arch-awesome-installer/main/fstab
 
 # https://wiki.archlinux.org/index.php/Chroot
 arch-chroot /mnt /bin/bash
